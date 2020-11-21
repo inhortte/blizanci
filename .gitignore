@@ -20,8 +20,12 @@ rebar3.crashdump
 *.pem
 config/sys.config
 config/vm.args
+cgi-bin/*
 cgi-vars
 fresh-start
 rebar.lock
 run
 todo.org
+public_gemini/*
+!public_gemini/index.gemini
+!public_gemini/restricted

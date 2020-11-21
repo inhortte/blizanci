@@ -254,8 +254,9 @@ respond({init_servlet, Pid}, _State) ->
     {expect_servlet, Pid};
 
 respond({servlet_output, Msg}, #state{transport=Transport, socket=Socket}) ->
-    Header = format_headers(20, <<"text/plain">>),
-    Transport:send(Socket, [Header, Msg]),
+    % Header = format_headers(20, <<"text/gemini">>),
+    % Transport:send(Socket, [Header, Msg]),
+    Transport:send(Socket, Msg),
     Transport:close(Socket),
     finished;
 
